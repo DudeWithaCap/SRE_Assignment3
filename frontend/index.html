@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking payment simulation</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <h1>Banking payment simulation</h1>
+        <p class="subtitle">
+          Prometheus at 9090
+          Grafana at 3001
+        </p>
+      </header>
+
+      <section class="panel">
+        <h2>Simulation</h2>
+        <div class="actions">
+          <button type="button" id="btn-start" class="btn btn-primary">Start simulation</button>
+          <button type="button" id="btn-stop" class="btn" disabled>Stop simulation</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Manual calls</h2>
+        <div class="actions">
+          <button type="button" id="btn-success" class="btn">Successful payment</button>
+          <button type="button" id="btn-fail" class="btn btn-warn">Failed payment</button>
+          <button type="button" id="btn-slow" class="btn btn-accent">Slow payment (&gt;5s)</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Last result</h2>
+        <pre id="last-result" class="output">No requests yet.</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Activity log</h2>
+        <ul id="log" class="log"></ul>
+      </section>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
